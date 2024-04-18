@@ -1,0 +1,100 @@
+$fontFamily:
+  'Inter',
+  'Open Sans',
+  -apple-system,
+  BlinkMacSystemFont,
+  'Segoe UI',
+  Roboto,
+  Oxygen,
+  Ubuntu,
+  Cantarell,
+  'Helvetica Neue',
+  sans-serif;
+
+$familyInter: $fontFamily;
+
+$familyCommon:
+  tt-commons-pro,
+  system-ui,
+  -apple-system,
+  BlinkMacSystemFont,
+  'Segoe UI',
+  Roboto,
+  Oxygen,
+  Ubuntu,
+  Cantarell,
+  'Open Sans',
+  'Helvetica Neue',
+  sans-serif;
+$images: '../images/';
+$img: '../images/';
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1440px,
+);
+//Пример обращения к переменной
+// max-width: map-get($grid-breakpoints, "xl");
+
+@mixin button {
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 120%;
+  letter-spacing: 0%;
+  font-family: $familyCommon;
+}
+
+@mixin text {
+  font-size: 20px;
+  line-height: 1.3;
+}
+
+@mixin title {
+  font-family: $familyInter;
+  font-size: 22px;
+  line-height: 1.3;
+}
+
+@mixin sectionHead {
+  font-size: 64px;
+  line-height: 1;
+  font-weight: 400;
+}
+
+@mixin fontcommon {
+  font-family: $familyCommon;
+}
+
+@mixin fontinter {
+  font-family: $familyInter;
+}
+
+:root {
+  --radius-lg: 48px;
+  --radius-default: 24px;
+
+  --header-height: 92px;
+
+  --text-gray: #93a8c0;
+  --text-darkgray: #2f3c4c;
+  --color-white: #fff;
+  --color-black: #000;
+  --color-text: #25313f;
+  --footer-color: #4b5a6c;
+
+  --color-blue: #00b2ff;
+  --color-indigo: #6610f2;
+  --color-purple: #6f42c1;
+  --color-pink: #d63384;
+  --color-red: #dc3545;
+  --color-orange: #fd7e14;
+  --color-yellow: #ffc107;
+  --color-green: #198754;
+  --color-teal: #20c997;
+  --color-cyan: #00f3fb80;
+
+  --btn-success-color: rgb(0, 217, 223);
+}

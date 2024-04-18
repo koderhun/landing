@@ -1,0 +1,15 @@
+// @tailwind base;
+// @tailwind components;
+// @tailwind utilities;
+
+@import 'helpers/_reset';
+@import 'helpers/variables';
+@import 'helpers/mixins';
+@import 'helpers/functions';
+@import 'vendor/libs';
+@import 'fonts';
+
+@import 'main';
+@import 'responsive/desktop';
+@import 'responsive/tablet';
+@import 'responsive/mobile';
