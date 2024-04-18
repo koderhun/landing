@@ -91,18 +91,19 @@ h4 {
   font-size: 24px;
 }
 
+.btn-primary {
+  background: var(--c04);
+  border-color: var(--c04);
+  color: var(--color-white);
+  backdrop-filter: blur(24px);
+}
+
 .btn-success {
   border-radius: var(--radius-lg);
   backdrop-filter: blur(24px);
   background: var(--btn-success-color);
   color: white;
-
   @include fontcommon;
-
-  &:hover,
-  &:focus {
-    opacity: 0.8;
-  }
 }
 
 .btn-cell,
@@ -153,12 +154,12 @@ h4 {
 
 .btn-outline-secondary {
   font-size: 32px;
-  line-height: 1.1;
+  line-height: 1;
   color: var(--color-white);
-  padding: 19px 32px 25px 32px;
+  padding: 23px 32px 23px 32px;
   border: 1px solid rgb(127, 129, 220);
   border-radius: var(--radius-lg);
-  backdrop-filter: blur(24px);
+  text-align: center;
 }
 
 .baner {
@@ -497,13 +498,44 @@ img {
   }
 }
 
+.row3 {
+  padding-bottom: 35px;
+  background: url($img + 't.svg') no-repeat 912px -55px/175px 195px,
+    url($img + 'vtb.svg') no-repeat 568px 108px/118px 105px,
+    url($img + 'yu.svg') no-repeat 1002px 122px/160px 110px,
+    url($img + 'pc.png') no-repeat 1080px 289px/210px 230px,
+    url($img + 'support.png') no-repeat 37% 87%/300px 310px,
+    url($img + 'comment.png') no-repeat 69.5% 96.3%/112px 111px;
+
+  &__left,
+  &__right {
+    width: 100%;
+  }
+
+  &__left {
+    max-width: 566px;
+  }
+}
+
 .sectionHead {
   @include fontcommon;
   font-size: 64px;
   line-height: 1;
+  letter-spacing: 1px;
   font-weight: normal;
   color: var(--color-white);
   padding-bottom: 48px;
+}
+
+.translucent {
+  padding: 58px 24px 24px 24px;
+  font-size: 24px;
+  @include fontcommon;
+  color: var(--color-white);
+  border-radius: var(--radius-default);
+  backdrop-filter: blur(24px);
+  margin-top: 44px;
+  background: rgba(123, 128, 229, 0.2);
 }
 
 .dnblock {
@@ -511,7 +543,6 @@ img {
   padding: 24px;
   background-color: var(--color-white);
   border-radius: var(--radius-default);
-  width: 566px;
 
   &__head {
     @include fontcommon;
@@ -557,6 +588,10 @@ img {
 .opblock {
   margin-bottom: 72px;
 
+  &--2 {
+    max-width: 450px;
+  }
+
   &__head {
     @include fontcommon;
     font-size: 24px;
@@ -569,6 +604,96 @@ img {
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
+  }
+}
+
+.fz {
+  font-size: 20px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.weofferblock {
+  padding: 35px 23px;
+  border-radius: var(--radius-lg);
+  background: var(--c05);
+
+  &__subhead {
+    @include fontcommon;
+    font-size: 32px;
+    line-height: 110%;
+    color: var(--color-white);
+    font-weight: normal;
+    margin: 0px 0 24px 0;
+  }
+
+  &__text {
+    color: var(--b2);
+    line-height: 130%;
+    font-size: 20px;
+  }
+
+  &__list {
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  &__pictureBlock {
+    display: block;
+    min-width: 776px;
+  }
+
+  &__footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 48px;
+  }
+
+  &__slide1 {
+    margin-bottom: -74px;
+  }
+
+  &__dots {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 16px;
+
+    div {
+      width: 8px;
+      height: 8px;
+      background-color: var(--c04);
+      border-radius: 100%;
+      display: block;
+      transition: all 0.3s;
+
+      &.active {
+        width: 20px;
+        height: 20px;
+        background-color: var(--color-white);
+      }
+    }
+  }
+
+  .row {
+    gap: 73px;
+    align-items: self-end;
+  }
+
+  .col {
+    width: 100%;
+    position: relative;
+  }
+
+  .btn {
+    &.active {
+      background: var(--color-white);
+      border-color: var(--color-white);
+      color: var(--c05);
+    }
   }
 }
 
