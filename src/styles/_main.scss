@@ -137,9 +137,9 @@ h4 {
 }
 
 .btn-black {
-  border-radius: 48px;
+  border-radius: var(--radius-lg);
   backdrop-filter: blur(24px);
-  background: rgba(62, 62, 62, 0.5);
+  background: var(--color-black);
   color: var(--color-white);
 }
 
@@ -492,6 +492,7 @@ img {
 
 .section3 {
   padding-top: 92px;
+  padding-bottom: 97px;
 
   .row {
     gap: 69px;
@@ -521,7 +522,6 @@ img {
   @include fontcommon;
   font-size: 64px;
   line-height: 1;
-  letter-spacing: 1px;
   font-weight: normal;
   color: var(--color-white);
   padding-bottom: 48px;
@@ -610,12 +610,13 @@ img {
 .fz {
   font-size: 20px;
   position: absolute;
-  top: 0;
-  right: 0;
+  top: -68px;
+  right: -44px;
+  padding: 12px 14px;
 }
 
 .weofferblock {
-  padding: 35px 23px;
+  padding: 35px 23px 28px 23px;
   border-radius: var(--radius-lg);
   background: var(--c05);
 
@@ -638,6 +639,7 @@ img {
     display: inline-flex;
     flex-wrap: wrap;
     gap: 8px;
+    margin-bottom: 38px;
   }
 
   &__pictureBlock {
@@ -661,6 +663,7 @@ img {
     align-items: center;
     justify-content: flex-end;
     gap: 16px;
+    padding-right: 24px;
 
     div {
       width: 8px;
@@ -694,6 +697,75 @@ img {
       border-color: var(--color-white);
       color: var(--c05);
     }
+  }
+}
+
+.clientsblock {
+  padding: 100px 0 0 0;
+
+  &__badge {
+    padding: 20px;
+    text-align: left;
+    font-size: 16px;
+    line-height: 120%;
+    color: var(--color-white);
+    width: 212px;
+    max-width: 100%;
+    border: 1px solid var(--c03);
+    border-radius: var(--radius-default);
+    margin-top: 15px;
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    margin-top: 22px;
+    gap: 30px;
+  }
+
+  .sectionHead {
+    padding-bottom: 0;
+  }
+
+  .row {
+    gap: 24px;
+  }
+}
+
+.section4 {
+  background-color: var(--color-white);
+  border-radius: var(--radius-lg);
+  color: var(--color-black);
+  padding: 82px 0;
+
+  .sectionHead {
+    color: var(--color-black);
+    padding-bottom: 0;
+  }
+}
+
+.saas {
+  &__subtitle {
+    font-size: 32px;
+    line-height: 125%;
+    padding-top: 20px;
+  }
+
+  &__row1 {
+    color: var(--b5);
+    gap: 24px;
+    margin-right: -24px;
+  }
+
+  &__text {
+    font-size: 20px;
+    line-height: 125%;
+  }
+
+  &__picture {
+    display: block;
+    min-width: 280px;
+    max-width: 100%;
   }
 }
 
