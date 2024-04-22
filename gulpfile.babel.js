@@ -1,8 +1,8 @@
-'use strict';
+'use strict'
 
-import gulp from 'gulp';
+import gulp from 'gulp'
 
-const requireDir = require('require-dir');
+const requireDir = require('require-dir')
 
 const paths = {
   views: {
@@ -34,7 +34,7 @@ const paths = {
     watch: './src/fonts/**/*.{woff,woff2}',
   },
   favicons: {
-    srcFolder: './src/images/favicon/',
+    srcFolder: './src/images/favicons/',
     src: './src/images/favicon/favicon.png',
     dist: './dist/images/favicons/',
     data: './dist/images/favicons/data.json',
@@ -46,23 +46,32 @@ const paths = {
   deploy: {
     src: './dist/**/*',
   },
-};
+}
 
-requireDir('./gulp-tasks/');
+requireDir('./gulp-tasks/')
 
-export { paths };
+export {paths}
 
 export const development = gulp.series(
   'clean',
   'views',
-  gulp.parallel(['styles', 'scripts', 'images', 'webp', 'fonts', 'favicons']),
-  gulp.parallel('serve'),
-);
+  'styles',
+  gulp.parallel(['scripts', 'images', 'webp', 'fonts', 'favicons']),
+  'serve',
+)
 
 export const prod = gulp.series(
   'clean',
   'views',
-  gulp.parallel(['styles', 'scripts', 'images', 'webp', 'fonts', 'favicons', 'gzip']),
-);
+  gulp.parallel([
+    'styles',
+    'scripts',
+    'images',
+    'webp',
+    'fonts',
+    'favicons',
+    'gzip',
+  ]),
+)
 
-export default development;
+export default development
