@@ -788,6 +788,28 @@ img {
   margin-right: -24px;
   margin-top: 100px;
 
+  &--second {
+    margin-top: 50px;
+
+    .saasinfo {
+      &__left {
+        padding: 24px;
+      }
+
+      &__text {
+        gap: 24px;
+        column-count: 2;
+      }
+
+      &__center {
+        padding: 24px;
+        .btn {
+          white-space: nowrap;
+        }
+      }
+    }
+  }
+
   &__head {
     font-size: 36px;
     line-height: 100%;
