@@ -170,6 +170,12 @@ h4 {
   font-size: 24px;
 }
 
+.btn-small2 {
+  padding: 14px 22px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
 .baner {
   padding-top: var(--header-height);
   padding-bottom: 34px;
@@ -527,6 +533,7 @@ img {
   }
 }
 
+.sectionhead,
 .sectionHead {
   @include fontcommon;
   font-size: 64px;
@@ -745,12 +752,16 @@ img {
   background-color: var(--color-white);
   border-radius: var(--radius-lg);
   color: var(--color-black);
-  padding: 82px 0;
+  padding: 82px 0 65px 0;
 
   .sectionHead {
     color: var(--color-black);
     padding-bottom: 0;
   }
+}
+
+.section5 {
+  padding-top: 91px;
 }
 
 .saas {
@@ -879,6 +890,166 @@ img {
   &__footer {
     display: flex;
     justify-content: flex-end;
+  }
+}
+
+.int {
+  padding: 38px 24px 24px 24px;
+  border-radius: var(--radius-default);
+  width: 50%;
+  position: relative;
+  overflow: hidden;
+
+  &__row {
+    margin-left: -24px;
+    margin-right: -24px;
+    margin-top: 24px;
+    gap: 24px;
+  }
+
+  &--lightblue {
+    background: #e6eef6 url($img + 'academy.png') no-repeat right bottom / 100%;
+
+    .int {
+      &__footer {
+        display: flex;
+        width: 100%;
+        gap: 8px;
+        margin-left: 8px;
+        margin-top: 83px;
+
+        .btn {
+          white-space: nowrap;
+        }
+      }
+    }
+  }
+
+  &--blue {
+    background-color: #c5dbfc;
+
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      width: 314px;
+      height: 158px;
+      background: url($img + 'logo-company.png') no-repeat center;
+      background-size: 100% 100%;
+    }
+  }
+
+  &__head {
+    font-size: 32px;
+    line-height: 110%;
+    margin-bottom: 24px;
+    color: var(--b9);
+  }
+
+  &__text {
+    font-size: 20px;
+    line-height: 130%;
+    color: var(--b6);
+    padding-bottom: 16px;
+  }
+
+  &__footer {
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 130%;
+    width: 310px;
+    margin-top: 25px;
+  }
+}
+
+.tarif {
+  font-size: 20px;
+  color: var(--b1);
+  line-height: 130%;
+
+  &__head {
+    font-weight: 600;
+  }
+
+  &__left,
+  &__right {
+    width: 50%;
+  }
+
+  &__left {
+    position: relative;
+  }
+
+  &__right {
+    padding-top: 20px;
+  }
+
+  &__picture {
+    position: absolute;
+    right: 210px;
+    top: 107px;
+  }
+
+  &__text {
+    padding-bottom: 40px;
+  }
+
+  .row {
+    gap: 24px;
+  }
+}
+
+.tf {
+  padding-top: 91px;
+
+  &__list {
+    padding-top: 90px;
+    display: flex;
+    gap: 7px;
+  }
+}
+
+.tcard {
+  padding: 18px 16px;
+  background: var(--b1);
+  border-radius: var(--radius-default);
+  color: var();
+}
+
+.th {
+  display: flex;
+  &__left {
+    display: flex;
+    gap: 26px;
+  }
+  &__head {
+    display: inline-block;
+    padding-bottom: 0;
+  }
+}
+
+.tg {
+  display: flex;
+  font-size: 24px;
+  line-height: 1;
+  font-weight: bold;
+  background-color: var(--color-white);
+  color: var(--b8);
+  border-radius: 32px;
+
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+    border-radius: 32px;
+
+    &.active {
+      color: var(--color-white);
+      background-color: var(--b8);
+    }
   }
 }
 
