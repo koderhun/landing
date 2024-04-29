@@ -334,7 +334,7 @@ h4 {
 .btn-black {
   border-radius: var(--radius-lg);
   backdrop-filter: blur(24px);
-  background: var(--color-black);
+  background: rgb(62 62 62 / 50%);
   color: var(--color-white);
 }
 
@@ -597,7 +597,9 @@ img {
 
   &__right {
     .row {
-      flex-direction: column;
+      @include md {
+        flex-direction: column;
+      }
     }
   }
 
@@ -706,8 +708,7 @@ img {
     .pi__footer {
       height: 45px;
       background: url($img + 'btns-picture.png') no-repeat center;
-      background-size: contain;
-      margin-left: -48px;
+      background-size: 100%;
 
       @include md {
         margin-left: 0;
@@ -814,6 +815,21 @@ img {
   &__socials {
     display: flex;
     gap: 8px;
+  }
+}
+
+.btn-mobile-group {
+  display: block;
+  max-width: 200px;
+  padding-top: 24px;
+  padding-bottom: 10px;
+
+  @include min-md {
+    display: none;
+  }
+
+  .btn {
+    margin-bottom: 8px;
   }
 }
 
