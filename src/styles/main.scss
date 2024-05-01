@@ -1203,7 +1203,7 @@ img {
   padding: 82px 0 65px 0;
 
   @include md {
-    padding: 40px 0 40px 0;
+    padding: 40px 0 46px 0;
     border-radius: var(--radius-default);
   }
 
@@ -1225,6 +1225,11 @@ img {
 .section5 {
   padding-top: 91px;
   padding-bottom: 35px;
+
+  @include md {
+    padding-top: 64px;
+    overflow: hidden;
+  }
 }
 
 .saas {
@@ -1453,11 +1458,23 @@ img {
   position: relative;
   overflow: hidden;
 
+  @include md {
+    width: 100%;
+    padding: 24px 16px 16px 16px;
+  }
+
   &__row {
     margin-left: -24px;
     margin-right: -24px;
     margin-top: 24px;
     gap: 24px;
+
+    @include md {
+      margin-left: 0;
+      margin-right: 0;
+      gap: 16px;
+      flex-direction: column;
+    }
   }
 
   &--lightblue {
@@ -1471,7 +1488,14 @@ img {
         margin-left: 8px;
         margin-top: 83px;
 
+        @include md {
+          display: block;
+          margin-left: 0;
+          margin-top: 60px;
+        }
+
         .btn {
+          margin-top: 8px;
           white-space: nowrap;
         }
       }
@@ -1480,6 +1504,10 @@ img {
 
   &--blue {
     background-color: #c5dbfc;
+
+    @include md {
+      padding: 28px 16px 100px 16px;
+    }
 
     &::before {
       content: '';
@@ -1490,7 +1518,12 @@ img {
       width: 314px;
       height: 158px;
       background: url($img + 'logo-company.png') no-repeat center;
-      background-size: 100% 100%;
+      background-size: cover;
+
+      @include md {
+        width: 200px;
+        height: 100px;
+      }
     }
   }
 
@@ -1499,6 +1532,12 @@ img {
     line-height: 110%;
     margin-bottom: 24px;
     color: var(--b9);
+
+    @include md {
+      font-size: 24px;
+      margin-bottom: 16px;
+      font-weight: 500;
+    }
   }
 
   &__text {
@@ -1506,6 +1545,13 @@ img {
     line-height: 130%;
     color: var(--b6);
     padding-bottom: 16px;
+
+    @include md {
+      font-weight: 300;
+      font-size: 16px;
+      line-height: 120%;
+      padding-bottom: 0;
+    }
   }
 
   &__footer {
@@ -1514,6 +1560,20 @@ img {
     line-height: 130%;
     width: 310px;
     margin-top: 25px;
+    position: relative;
+    z-index: 1;
+
+    @include md {
+      width: 100%;
+      margin-top: 16px;
+      font-size: 12px;
+      font-weight: 400;
+
+      .row {
+        justify-content: flex-start;
+        gap: 16px;
+      }
+    }
   }
 }
 
@@ -1524,11 +1584,27 @@ img {
 
   &__head {
     font-weight: 600;
+
+    @include md {
+      padding-bottom: 0;
+    }
   }
 
   &__left,
   &__right {
     width: 50%;
+
+    @include md {
+      width: 100%;
+    }
+  }
+
+  &__text {
+    @include md {
+      font-size: 16px;
+      line-height: 130%;
+      color: var(--b1);
+    }
   }
 
   &__left {
@@ -1537,12 +1613,23 @@ img {
 
   &__right {
     padding-top: 20px;
+
+    @include md {
+      padding-top: 0;
+    }
   }
 
   &__picture {
     position: absolute;
     right: 210px;
     top: 107px;
+    z-index: -1;
+
+    @include md {
+      right: -25px;
+      top: 45px;
+      width: 104px;
+    }
   }
 
   &__text {
@@ -1551,11 +1638,20 @@ img {
 
   .row {
     gap: 24px;
+
+    @include md {
+      gap: 16px;
+      flex-direction: column;
+    }
   }
 }
 
 .tf {
   padding-top: 158px;
+
+  @include md {
+    padding-top: 82px;
+  }
 
   &__footer {
     padding: 26px 0;
@@ -1737,6 +1833,11 @@ img {
 
 .th {
   display: flex;
+
+  @include md {
+    justify-content: space-between;
+  }
+
   &__left {
     display: flex;
     gap: 26px;
@@ -1860,12 +1961,21 @@ img {
   display: flex;
   gap: 16.5px;
 
+  @include sm {
+    gap: 8px;
+    flex-direction: column;
+  }
+
   &__item {
     font-size: 16px;
     color: var(--color-white);
     padding: 18px 0;
     text-decoration: none;
     font-family: $fontFamily;
+
+    @include sm {
+      padding: 0;
+    }
 
     &:hover {
       opacity: 0.8;
