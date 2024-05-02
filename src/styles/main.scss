@@ -246,7 +246,7 @@ h4 {
 }
 
 .section1 {
-  background: url($img + 'section1.png') no-repeat center;
+  background: url($img + 'section1.webp') no-repeat center;
 }
 
 .btn {
@@ -394,7 +394,7 @@ h4 {
   padding-top: var(--header-height);
   padding-bottom: 34px;
   padding-top: var(--header-height);
-  background: url($img + '/section1.png') no-repeat center top;
+  background: url($img + '/section1.webp') no-repeat center top;
   color: var(--color-white);
 
   &__head {
@@ -561,7 +561,7 @@ img {
   }
 
   .container {
-    background: url($img + 'rocket-dooglys.png') no-repeat 106px 337px;
+    background: url($img + 'rocket-dooglys.webp') no-repeat 106px 337px;
     background-size: 500px;
 
     @include sm {
@@ -680,7 +680,7 @@ img {
       width: 230px;
       height: 338px;
       background-size: 100%;
-      background-image: url($img + 'smart.png');
+      background-image: url($img + 'smart.webp');
       background-position: center;
       background-repeat: no-repeat;
     }
@@ -712,7 +712,7 @@ img {
 
     .pi__footer {
       height: 45px;
-      background: url($img + 'btns-picture.png') no-repeat center;
+      background: url($img + 'btns-picture.webp') no-repeat center;
       background-size: 100%;
 
       @include md {
@@ -736,7 +736,7 @@ img {
       display: block;
       width: 340px;
       height: 233px;
-      background: url($img + 'Samsung_Tab.png') no-repeat center;
+      background: url($img + 'Samsung_Tab.webp') no-repeat center;
       background-size: 100% 100%;
       right: -12px;
       top: 42px;
@@ -758,7 +758,7 @@ img {
     &::after {
       content: '';
       position: absolute;
-      background: url($img + 'updating-bg.png') no-repeat center;
+      background: url($img + 'updating-bg.webp') no-repeat center;
       background-size: 100% 100%;
       width: 240px;
       height: 240px;
@@ -881,9 +881,9 @@ img {
     url($img + 't.svg') no-repeat 912px -55px/175px 195px,
     url($img + 'vtb.svg') no-repeat 568px 108px/118px 105px,
     url($img + 'yu.svg') no-repeat 1002px 122px/160px 110px,
-    url($img + 'pc.png') no-repeat 1080px 289px/210px 230px,
-    url($img + 'support.png') no-repeat 37% 87%/300px 310px,
-    url($img + 'comment.png') no-repeat 69.5% 96.3%/112px 111px;
+    url($img + 'pc.webp') no-repeat 1080px 289px/210px 230px,
+    url($img + 'support.webp') no-repeat 37% 87%/300px 310px,
+    url($img + 'comment.webp') no-repeat 69.5% 96.3%/112px 111px;
 
   &__left,
   &__right {
@@ -1478,7 +1478,7 @@ img {
   }
 
   &--lightblue {
-    background: #e6eef6 url($img + 'academy.png') no-repeat right bottom / 100%;
+    background: #e6eef6 url($img + 'academy.webp') no-repeat right bottom / 100%;
 
     .int {
       &__footer {
@@ -1517,7 +1517,7 @@ img {
       bottom: 0;
       width: 314px;
       height: 158px;
-      background: url($img + 'logo-company.png') no-repeat center;
+      background: url($img + 'logo-company.webp') no-repeat center;
       background-size: cover;
 
       @include md {
@@ -1882,6 +1882,12 @@ img {
   border-top-left-radius: 48px;
   border-top-right-radius: 48px;
 
+  @include md {
+    border-top-left-radius: var(--radius-default);
+    border-top-right-radius: var(--radius-default);
+    padding: 22px 0 32px 0;
+  }
+
   &__menu {
     width: 52%;
   }
@@ -1891,12 +1897,24 @@ img {
     align-items: flex-start;
     justify-content: space-between;
     gap: 20px;
+
+    @include sm {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+    }
   }
 
   &__logoblock {
     display: flex;
     flex-direction: column;
     gap: 77px;
+
+    @include sm {
+      gap: 0;
+      justify-content: space-between;
+      height: 100%;
+    }
   }
 
   .logo {
@@ -1915,6 +1933,11 @@ img {
     display: flex;
     flex-direction: column;
     gap: 38px;
+
+    @include sm {
+      width: 100%;
+      padding-top: 12px;
+    }
   }
 
   &__info {
@@ -1923,6 +1946,11 @@ img {
 
   &__right {
     padding-right: 0px;
+
+    @include sm {
+      grid-column: span 2;
+      padding-top: 22px;
+    }
   }
 
   &__btn-group {
@@ -1941,6 +1969,11 @@ img {
     display: flex;
     align-items: center;
     justify-content: center;
+
+    @include sm {
+      height: 40px;
+      padding-top: 5px;
+    }
 
     &-phone {
       color: var(--color-black);
@@ -1968,10 +2001,10 @@ img {
 
   &__item {
     font-size: 16px;
+    font-weight: 500;
     color: var(--color-white);
     padding: 18px 0;
     text-decoration: none;
-    font-family: $fontFamily;
 
     @include sm {
       padding: 0;
@@ -1987,4 +2020,27 @@ img {
   display: flex;
   gap: 42px;
   align-items: flex-end;
+  font-size: 12px;
+
+  &--mobile {
+    @include min-sm {
+      .footerinfo__left {
+        display: none;
+      }
+    }
+  }
+
+  &--desktop {
+    @include sm {
+      .footerinfo__left {
+        display: none;
+      }
+    }
+  }
+
+  &__right {
+    @include sm {
+      width: 100%;
+    }
+  }
 }
