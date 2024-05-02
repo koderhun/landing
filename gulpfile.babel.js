@@ -69,7 +69,7 @@ export const prod = gulp.series(
     'images',
     'webp',
     'fonts',
-    'favicons',
+    // 'favicons',
     'gzip',
   ]),
 )
