@@ -106,6 +106,7 @@ body,
     padding-top: 14px;
     display: flex;
     justify-content: space-between;
+    gap: 24px;
   }
 
   &__header {
@@ -129,13 +130,13 @@ body,
   justify-content: space-between;
   gap: 24px;
   padding-top: 36px;
+  padding-bottom: 250px;
 
   &__content {
     min-width: 920px;
     display: flex;
     flex-direction: column;
     gap: 48px;
-    padding-bottom: 48px;
   }
 
   &__tags {
@@ -147,6 +148,21 @@ body,
 
 .tag {
   @include tag;
+}
+
+.alertline {
+  &__header {
+    @include sectionHead;
+    color: var(--color-black);
+    font-weight: 500;
+    margin: 0;
+  }
+
+  &__footer {
+    padding: 24px 0;
+    display: flex;
+    gap: 24px;
+  }
 }
 
 .header {
@@ -412,6 +428,8 @@ body,
   background: var(--btn-success-color);
   color: white;
   @include fontcommon;
+  line-height: 1.5;
+  padding: 13px 20px;
 }
 
 .btn-cell,
@@ -458,6 +476,7 @@ body,
   padding: 12px 24px;
   border-radius: 24px;
   @include fontcommon;
+  line-height: 1.5;
 
   @include md {
     padding: 8px 16px;
