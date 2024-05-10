@@ -83,6 +83,26 @@ $container-max-widths: (
   font-family: $familyInter;
 }
 
+@mixin blur {
+  backdrop-filter: blur(24px);
+}
+
+@mixin tag {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 48px;
+  padding: 0 20px;
+  border: 1px solid var(--b4);
+  color: var(--b4);
+  font-size: 20px;
+  line-height: 100%;
+  font-weight: 500;
+  text-transform: lowercase;
+  text-decoration: none;
+  border-radius: 48px;
+}
+
 :root {
   --radius-lg: 48px;
   --radius-default: 24px;
