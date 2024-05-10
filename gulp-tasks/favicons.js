@@ -1,10 +1,10 @@
-'use strict';
+'use strict'
 
-import { paths } from '../gulpfile.babel';
-import gulp from 'gulp';
-const realFavicon = require('gulp-real-favicon');
-const fs = require('fs');
-const FAVICON_DATA_FILE = paths.favicons.data;
+import {paths} from '../gulpfile.babel'
+import gulp from 'gulp'
+const realFavicon = require('gulp-real-favicon')
+const fs = require('fs')
+const FAVICON_DATA_FILE = paths.favicons.data
 
 gulp.task('favicons-img', (done) => {
   realFavicon.generateFavicon(
@@ -62,20 +62,20 @@ gulp.task('favicons-img', (done) => {
       markupFile: FAVICON_DATA_FILE,
     },
     function () {
-      done();
+      done()
     },
-  );
-});
+  )
+})
 
-gulp.task('inject-favicon', function () {
-  return gulp
-    .src(paths.views.dist + '*.html')
-    .pipe(
-      realFavicon.injectFaviconMarkups(
-        JSON.parse(fs.readFileSync(FAVICON_DATA_FILE)).favicon.html_code,
-      ),
-    )
-    .pipe(gulp.dest(paths.views.dist));
-});
+// gulp.task('inject-favicon', function () {
+//   return gulp
+//     .src(paths.views.dist + '*.html')
+//     .pipe(
+//       realFavicon.injectFaviconMarkups(
+//         JSON.parse(fs.readFileSync(FAVICON_DATA_FILE)).favicon.html_code,
+//       ),
+//     )
+//     .pipe(gulp.dest(paths.views.dist));
+// });
 
-gulp.task('favicons', gulp.series('favicons-img', 'inject-favicon'))
+gulp.task('favicons', gulp.series('favicons-img'))
