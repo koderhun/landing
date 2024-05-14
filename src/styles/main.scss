@@ -56,6 +56,10 @@ body,
   padding-bottom: var(--footer-radius);
   background-color: transparent;
   flex-grow: 1;
+
+  @include md {
+    padding-top: 65px;
+  }
 }
 
 .page {
@@ -64,6 +68,10 @@ body,
 
     > .container {
       padding-top: 45px;
+
+      @include md {
+        padding-top: 10px;
+      }
     }
   }
 
@@ -86,19 +94,28 @@ body,
   line-height: 107%;
   margin-bottom: 0;
   color: var(--color-black);
-}
+  margin-bottom: 27px;
+  position: relative;
 
-.page-header-block {
-  display: flex;
-  align-items: self-end;
-  padding-bottom: 27px;
+  @include md {
+    font-size: 38px;
+    line-height: 100%;
+    margin-bottom: 40px;
+  }
 
   .date {
+    position: absolute;
+    right: 0;
+    bottom: 0;
     font-size: 16px;
     line-height: 130%;
     color: var(--b4);
+    margin-bottom: 6px;
     white-space: nowrap;
-    padding-bottom: 15px;
+
+    @include md {
+      font-size: 12px;
+    }
   }
 }
 
@@ -155,9 +172,14 @@ body,
   margin-bottom: 12px;
   font-size: 20px;
   color: var(--b4);
+  gap: 6px;
+
+  @include md {
+    font-size: 16px;
+    margin-bottom: 22px;
+  }
 
   &__link {
-    font-size: 20px;
     color: var(--b4);
     text-decoration: none;
     border-bottom: 1px solid var(--c01);
@@ -180,6 +202,12 @@ body,
   gap: 24px;
   padding-top: 0;
   padding-bottom: 170px;
+
+  @include md {
+    flex-direction: column-reverse;
+    gap: 0;
+    padding-bottom: 138px;
+  }
 
   &__content {
     max-width: 920px;
@@ -205,16 +233,31 @@ img {
   margin-bottom: 50px;
   margin-top: 44px;
 
+  @include md {
+    margin-top: 20px;
+    margin-bottom: 25px;
+  }
+
   &__text {
     color: var(--b5);
     font-size: 16px;
     line-height: 130%;
+
+    @include md {
+      font-size: 12px;
+      max-width: 84%;
+      line-height: 135%;
+    }
   }
 
   img {
     max-width: 100%;
     margin-bottom: 20px;
     border-radius: var(--radius-default);
+
+    @include md {
+      margin-bottom: 10px;
+    }
   }
 }
 
@@ -223,6 +266,10 @@ img {
   line-height: 130%;
   color: var(--b8);
 
+  @include md {
+    font-size: 16px;
+  }
+
   h1,
   h2,
   h3,
@@ -230,18 +277,32 @@ img {
     font-weight: 500;
     color: var(--b6);
     margin-bottom: 48px;
+
+    @include md {
+      margin-bottom: 25px;
+    }
   }
 
   h2 {
     font-size: 32px;
     line-height: 110%;
     margin-bottom: 42px;
+
+    @include md {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
   }
 
   h3 {
     font-size: 24px;
     line-height: 120%;
     margin-top: 50px;
+
+    @include md {
+      margin-top: 25px;
+      font-size: 20px;
+    }
   }
 
   p {
@@ -262,6 +323,10 @@ img {
   display: block;
   max-width: 100%;
   margin-top: 44px;
+
+  @include md {
+    margin-top: 26px;
+  }
 }
 
 .tag {
@@ -298,6 +363,11 @@ img {
 
     @include lg {
       align-items: center;
+    }
+
+    @include md {
+      padding-top: 17px;
+      padding-bottom: 0;
     }
   }
 
@@ -507,6 +577,11 @@ img {
   display: inline-block;
   transition: all 0.2s;
   text-align: center;
+
+  @include md {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
 
   &:hover,
   &:focus {
@@ -2135,9 +2210,7 @@ img {
   border-top-right-radius: var(--footer-radius);
 
   @include md {
-    border-top-left-radius: var(--radius-default);
-    border-top-right-radius: var(--radius-default);
-    padding: 22px 0 32px 0;
+    padding: 35px 0 32px 0;
   }
 
   &__menu {
@@ -2150,10 +2223,10 @@ img {
     justify-content: space-between;
     gap: 20px;
 
-    @include sm {
+    @include md {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 30px;
+      gap: 16px;
     }
   }
 
@@ -2162,7 +2235,7 @@ img {
     flex-direction: column;
     gap: 77px;
 
-    @include sm {
+    @include md {
       gap: 0;
       justify-content: space-between;
       height: 100%;
@@ -2176,6 +2249,11 @@ img {
     display: flex;
     align-items: center;
 
+    @include md {
+      max-width: 140px;
+      height: 21px;
+    }
+
     img {
       width: 100%;
     }
@@ -2186,9 +2264,10 @@ img {
     flex-direction: column;
     gap: 38px;
 
-    @include sm {
+    @include md {
       width: 100%;
-      padding-top: 12px;
+      padding-top: 0;
+      gap: 44px;
     }
   }
 
@@ -2199,9 +2278,9 @@ img {
   &__right {
     padding-right: 0px;
 
-    @include sm {
+    @include md {
       grid-column: span 2;
-      padding-top: 22px;
+      padding-top: 39px;
     }
   }
 
@@ -2209,6 +2288,10 @@ img {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+
+    @include md {
+      flex-wrap: nowrap;
+    }
   }
 
   .btn {
@@ -2222,9 +2305,13 @@ img {
     align-items: center;
     justify-content: center;
 
-    @include sm {
+    @include md {
       height: 40px;
+      padding: 0 16px;
+      font-size: 14px;
       padding-top: 5px;
+      letter-spacing: 1px;
+      white-space: nowrap;
     }
 
     &-phone {
@@ -2238,6 +2325,10 @@ img {
       background: rgba(61, 61, 61, 0.35);
       color: var(--color-white);
       margin-left: -20px;
+
+      @include md {
+        margin-left: 16px;
+      }
     }
   }
 }
@@ -2246,7 +2337,7 @@ img {
   display: flex;
   gap: 16.5px;
 
-  @include sm {
+  @include md {
     gap: 8px;
     flex-direction: column;
   }
@@ -2258,7 +2349,7 @@ img {
     padding: 18px 0;
     text-decoration: none;
 
-    @include sm {
+    @include md {
       padding: 0;
     }
 
@@ -2275,7 +2366,7 @@ img {
   font-size: 12px;
 
   &--mobile {
-    @include min-sm {
+    @include min-md {
       .footerinfo__left {
         display: none;
       }
@@ -2283,7 +2374,7 @@ img {
   }
 
   &--desktop {
-    @include sm {
+    @include md {
       .footerinfo__left {
         display: none;
       }
@@ -2291,8 +2382,16 @@ img {
   }
 
   &__right {
-    @include sm {
+    @include md {
       width: 100%;
     }
+  }
+}
+
+@include md {
+  :root {
+    --radius-default: 16px;
+
+    --footer-radius: 24px;
   }
 }
