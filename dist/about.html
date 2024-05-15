@@ -19,11 +19,12 @@
 <meta name="msapplication-TileColor" content="#da532c">
 <meta name="msapplication-config" content="./images/favicons/browserconfig.xml">
 <meta name="theme-color" content="#ffffff">
-  <title>guideline</title>
+  <title>О компании</title>
 </head>
 
-<body>
-  <div class="momenu">
+<body class="page page--full">
+  <div class="container-layout">
+    <div class="momenu">
   <div class="momenu__header">
     <div class="momenu__left">
       <a href="/" class="momenu__logo">
@@ -113,36 +114,95 @@
     </div>
   </div>
 </nav>
-  <div class="wrapper">
-    <div class="container">
-      <h2>Здесь собраны используемые ui элементы</h2>
-      <p>
-        <button type="button" class="btn btn-primary">Primary</button>
-        <button type="button" class="btn btn-secondary">Secondary</button>
-        <button type="button" class="btn btn-success">Success</button>
-        <button type="button" class="btn btn-danger">Danger</button>
-        <button type="button" class="btn btn-warning">Warning</button>
-        <button type="button" class="btn btn-info">Info</button>
-        <button type="button" class="btn btn-light">Light</button>
-        <button type="button" class="btn btn-dark">Dark</button>
+    <div class="wrapper">
+      <div class="breadcrumbs">
 
-        <button type="button" class="btn btn-link">Link</button>
-      </p>
-      <p>
-        <button type="button" class="btn btn-outline-primary">Primary</button>
-        <button type="button" class="btn btn-outline-secondary">Secondary</button>
-        <button type="button" class="btn btn-outline-success">Success</button>
-        <button type="button" class="btn btn-outline-danger">Danger</button>
-        <button type="button" class="btn btn-outline-warning">Warning</button>
-        <button type="button" class="btn btn-outline-info">Info</button>
-        <button type="button" class="btn btn-outline-light">Light</button>
-        <button type="button" class="btn btn-outline-dark">Dark</button>
+      </div>
+      <div class="container">
+        <h1 class="page-header">О компании</h1>
 
-      </p>
+        <div class="blogContainer">
+          <div class="blogContainer__content">
+            <div class="aboutline">
+              <div class="aboutline__text">
+                <p>
+                  Компания «Дуглис», на рынке 11 лет (с 2012 года). Только за последние 2 года ПО Dooglys установили
+                  более
+                  500 заведений в 100 городах России. Работаем также и с компаниями из стран СНГ.
+                </p>
+                <p>
+
+                  Наша основная цель — предоставить нашим клиентам надежное и эффективное программное обеспечение,
+                  которое
+                  поможет им оптимизировать бизнес-процессы и улучшить обслуживание клиентов.
+
+                </p>
+                <p>
+                  Наши специалисты имеют большой опыт работы в сфере ИТ и готовы предоставить индивидуальное решение для
+                  каждого клиента.
+                </p>
+              </div>
+
+              <div class="aboutline__info">
+                <p>
+                  ООО «Дуглис-СААС» <br>
+                  Юридический и почтовый адрес: 420500, Респ. Татарстан, Верхнеуслонский р-н, г. Иннополис, ул.
+                  Университетская, д. 7, оф. 218
+                  <br>
+                  Дата регистрации 28.07.2016
+                  <br>
+                  ОГРН 1161690131272
+                  <br>
+                  ИНН/КПП 1615012884/161501001
+                  <br>
+                  БИК 042202824
+
+                </p>
+                <p>
+                  Код ОПФ 12300 <br>
+                  Код ОКВЭД 62.01 (2014) <br>
+                  Генеральный директор Рыбин Андрей Юрьевич
+                </p>
+              </div>
+              <div class="aboutline__contacts">
+                <a href="tel:88003012751" class="contactlink contactlink--tel">8 800 301-27-51</a>
+                <a href="mailto:info@dooglys.com" class="contactlink contactlink--mail">info@dooglys.com</a>
+              </div>
+            </div>
+
+            <div class="mapline">
+              <div class="mapline__card">
+                <h3 class="mapline__city">
+                  Нижний Новгород
+                </h3>
+                <div class="mapline__address">
+                  603009, г. Нижний Новгород, <br>
+                  Приокский р-н, ул. Столетова, д. 6
+                </div>
+
+                <iframe class="mapline__map" src="https://yandex.ru/map-widget/v1/-/CCUZeIGMoA"
+                  frameborder="0"></iframe>
+              </div>
+
+              <div class="mapline__card">
+                <h3 class="mapline__city">
+                  Иннополис
+                </h3>
+                <div class="mapline___address">
+                  420500, Респ Татарстан, Верхнеуслонский р-н,
+                  <br>
+                  г. Иннополис, ул. Университетская, д. 7, оф. 218
+                </div>
+                <iframe class="mapline__map" src="https://yandex.ru/map-widget/v1/-/CBeuEDtrtB"
+                  frameborder="0"></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
 
-  <footer class="footer">
+    <footer class="footer">
 	<div class="container">
 		<div class="footer__line">
 			<div class="footer__logoblock">
@@ -200,7 +260,9 @@
 			</div>
 		</div>
 	</div>
-</footer> <script src="./scripts/vendor.js"></script>
+</footer>
+  </div>
+  <script src="./scripts/vendor.js"></script>
 <script src="./scripts/app.js"></script>
 </body>
 

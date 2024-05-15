@@ -90,6 +90,14 @@ body,
       margin-top: 20px;
     }
   }
+
+  &--full {
+    .blogContainer {
+      &__content {
+        width: 100%;
+      }
+    }
+  }
 }
 
 .page-header {
@@ -215,6 +223,7 @@ body,
   display: flex;
   margin-bottom: 12px;
   font-size: 20px;
+  min-height: 25px;
   color: var(--b4);
   gap: 6px;
 
@@ -798,9 +807,10 @@ img {
 }
 
 .btn-small2 {
-  padding: 14px 22px;
+  padding: 12px 20px;
   font-size: 20px;
-  font-weight: bold;
+  font-weight: 500;
+  line-height: 1.1;
 }
 
 .baner {
@@ -1969,7 +1979,7 @@ img {
 
   &__footer {
     font-size: 16px;
-    font-weight: bold;
+    font-weight: 500;
     line-height: 130%;
     width: 310px;
     margin-top: 25px;
@@ -2472,5 +2482,102 @@ img {
     @include md {
       width: 100%;
     }
+  }
+}
+
+.aboutline {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: 100%;
+  gap: 50px;
+  font-size: 20px;
+  line-height: 130%;
+  margin-top: -6px;
+
+  &__text {
+    color: var(--b4);
+    min-width: 539px;
+
+    @include lg {
+      min-width: 0;
+    }
+
+    p {
+      margin-bottom: 26px;
+    }
+  }
+
+  &__info {
+    font-size: 16px;
+    color: var(--b7);
+    line-height: 130%;
+  }
+
+  &__contacts {
+    margin-top: -8px;
+  }
+}
+
+.contactlink {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  text-decoration: none;
+  font-size: 36px;
+  color: var(--b7);
+  margin-bottom: 8px;
+
+  &::before {
+    content: ' ';
+    display: block;
+    height: 48px;
+    width: 48px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+  }
+
+  &--tel {
+    &::before {
+      background-image: url($img + 'tel.svg');
+    }
+  }
+
+  &--mail {
+    &::before {
+      background-image: url($img + 'mail.svg');
+    }
+  }
+}
+
+.mapline {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 23px;
+
+  &__card {
+    border-radius: var(--radius-default);
+    border: 1px solid var(--b2);
+  }
+
+  &__city {
+    font-size: 24px;
+    color: var(--color-black);
+    padding: 20px 23px 0 23px;
+  }
+
+  &__address {
+    padding: 17px 23px 0 23px;
+    font-size: 20px;
+    line-height: 130%;
+    color: var(--b6);
+  }
+
+  &__map {
+    margin-top: 28px;
+    overflow: hidden;
+    border-radius: var(--radius-default);
+    height: 196px;
+    width: 100%;
   }
 }
