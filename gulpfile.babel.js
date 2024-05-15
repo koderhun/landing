@@ -23,7 +23,7 @@ const paths = {
   images: {
     src: [
       './src/images/**/*.{jpg,jpeg,png,gif,tiff,svg}',
-      '!./src/images/favicon/*.{jpg,jpeg,png,gif,tiff}',
+      // '!./src/images/favicons/*.{jpg,jpeg,png,gif,tiff}',
     ],
     dist: './dist/images/',
     watch: './src/images/**/*.{jpg,jpeg,png,gif,svg,tiff}',
@@ -35,13 +35,18 @@ const paths = {
   },
   favicons: {
     srcFolder: './src/images/favicons/',
-    src: './src/images/favicon/favicon.png',
+    src: './src/images/favicons/favicon.svg',
     dist: './dist/images/favicons/',
     data: './dist/images/favicons/data.json',
   },
   gzip: {
     src: './src/.htaccess',
     dist: './dist/',
+  },
+
+  copy: {
+    src: './src/images/favicons/*.{webmanifest,xml}',
+    dist: './dist/images/favicons/',
   },
   deploy: {
     src: './dist/**/*',
@@ -56,7 +61,7 @@ export const development = gulp.series(
   'clean',
   'views',
   'styles',
-  gulp.parallel(['scripts', 'images', 'webp', 'fonts', 'favicons']),
+  gulp.parallel(['scripts', 'images', 'webp', 'fonts', 'copy']),
   'serve',
 )
 
@@ -69,8 +74,8 @@ export const prod = gulp.series(
     'images',
     'webp',
     'fonts',
-    // 'favicons',
     'gzip',
+    'copy',
   ]),
 )
 
