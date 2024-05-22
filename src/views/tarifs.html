@@ -6,21 +6,149 @@
   <title>Тарифы</title>
 </head>
 
-<body class="page page--text">
+<body class="page page--tf">
   <div class="container-layout">
     @@include("./template/header.html")
     <div class="wrapper">
       <div class="container">
-        <h1 class="page-header">
-          Тарифы
-          <span class="date">1 июня 2024</span>
-        </h1>
-
-        <div class="blogContainer">
-          <div class="blogContainer__content">
-            <div class="text-block">
-              <h2>Тарифы</h2>
+        <div class="tf tf--full">
+          <div class="th">
+            <div class="th__left">
+              <h3 class="sectionhead th__head">Цены</h3>
+              <div class="tg">
+                <div class="tg__item">В год</div>
+                <div class="tg__item active">В месяц</div>
+              </div>
+              <div class="gift">
+                <img src="./images/gift.webp" alt="" class="gift__img">
+                <div class="gift__text">При оплате за год
+                  1&nbsp;месяц бесплатно</div>
+              </div>
             </div>
+          </div>
+
+          <div class="tf__list">
+            <div class="swiper ncard-slider">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide ncard">
+                  <div class="ncard__head">
+                    <div class="ncard__pop">Популярный</div>
+                    <div class="ncard__name">Даром</div>
+                    <div class="ncard__price">
+                      500 <span class="rub">₽</span>
+                    </div>
+                    <a href="#" class="btn btn-outline ncard__btn">Попробовать</a>
+                  </div>
+                  <div class="ncard__content">
+                    <div class="ncard__comment">
+                      до 30 наименований
+                    </div>
+                    <div class="ncheck ncheck--checked"></div>
+                    <div class="ncheck ncheck--unchecked"></div>
+                    <div class="ncheck"></div>
+                  </div>
+                </div>
+                <div class="swiper-slide ncard">
+                  <div class="ncard__head">
+                    <div class="ncard__pop">Популярный</div>
+                    <div class="ncard__name">Быстрый старт</div>
+                    <div class="ncard__price">
+                      1500 <span class="rub">₽</span>
+                    </div>
+                    <a href="#" class="btn btn-outline ncard__btn">Попробовать</a>
+                  </div>
+                  <div class="ncard__content">
+                    <div class="ncard__comment">
+                      до 30 наименований
+                    </div>
+                    <div class="ncheck ncheck--checked"></div>
+                    <div class="ncheck ncheck--unchecked"></div>
+                    <div class="ncheck"></div>
+                  </div>
+                </div>
+
+                <div class="swiper-slide ncard">
+                  <div class="ncard__head">
+                    <div class="ncard__pop">Популярный</div>
+                    <div class="ncard__name">Оптимальный</div>
+                    <div class="ncard__price">
+                      2200 <span class="rub">₽</span>
+                    </div>
+                    <a href="#" class="btn btn-outline ncard__btn">Попробовать</a>
+                  </div>
+                  <div class="ncard__content">
+                    <div class="ncard__comment">
+                      более 100
+                    </div>
+                    <div class="ncheck ncheck--checked"></div>
+                    <div class="ncheck ncheck--unchecked"></div>
+                    <div class="ncheck"></div>
+                  </div>
+                </div>
+                
+                <div class="swiper-slide ncard">
+                  <div class="ncard__head">
+                    <div class="ncard__pop">Популярный</div>
+                    <div class="ncard__name">Максимальный</div>
+                    <div class="ncard__price">
+                      3000 <span class="rub">₽</span>
+                    </div>
+                    <a href="#" class="btn btn-outline ncard__btn">Попробовать</a>
+                  </div>
+                  <div class="ncard__content">
+                    <div class="ncard__comment">
+                      до 30 наименований
+                    </div>
+                    <div class="ncheck ncheck--checked"></div>
+                    <div class="ncheck ncheck--unchecked"></div>
+                    <div class="ncheck"></div>
+                  </div>
+                </div>
+
+                <div class="swiper-slide ncard">
+                  <div class="ncard__head">
+                    <div class="ncard__pop">Популярный</div>
+                    <div class="ncard__name">Премиальный</div>
+                    <div class="ncard__price">
+                      5000 <span class="rub">₽</span>
+                    </div>
+                    <a href="#" class="btn btn-outline ncard__btn">Попробовать</a>
+                  </div>
+                  <div class="ncard__content">
+                    <div class="ncard__comment">
+                      до 30 наименований
+                    </div>
+                    <div class="ncheck ncheck--checked"></div>
+                    <div class="ncheck ncheck--unchecked"></div>
+                    <div class="ncheck"></div>
+                  </div>
+                </div>
+
+                <div class="swiper-slide ncard ncard--black">
+                  <div class="ncard__head">
+                    <div class="ncard__pop">Популярный</div>
+                    <div class="ncard__name">Компания</div>
+                    <div class="ncard__price">
+                      ??? <span class="rub">₽</span>
+                    </div>
+                    <a href="#" class="btn btn-outline ncard__btn">Попробовать</a>
+                  </div>
+                  <div class="ncard__content">
+                    <div class="ncard__comment">
+                      до 30 наименований
+                    </div>
+                    <div class="ncheck ncheck--checked"></div>
+                    <div class="ncheck ncheck--unchecked"></div>
+                    <div class="ncheck"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+          </div>
+
+          <div class="tf__footer">
+            <a href="#" class="btn btn-tf">Сравнить тарифы</a>
           </div>
         </div>
       </div>
