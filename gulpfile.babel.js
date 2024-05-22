@@ -70,7 +70,7 @@ export const development = gulp.series(
   'clean',
   'views',
   'styles',
-  gulp.parallel(['scripts', 'images', 'webp', 'fonts', 'copy', 'copyScripts']),
+  gulp.parallel([ 'images', 'webp', 'fonts', 'copy', 'copyScripts']),
   'serve',
 )
 
@@ -79,7 +79,6 @@ export const prod = gulp.series(
   'views',
   gulp.parallel([
     'styles',
-    'scripts',
     'images',
     'webp',
     'fonts',
