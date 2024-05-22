@@ -2111,9 +2111,7 @@ img {
   }
 
   &__list {
-    padding-top: 83px;
-    display: flex;
-    gap: 7px;
+    padding-top: 152px;
 
     &--simple {
       padding-top: 0;
@@ -2360,24 +2358,40 @@ img {
 
   &--popular {
     position: relative;
-    background-color: #8eceff;
+
+    > * {
+      position: relative;
+      z-index: 1;
+    }
+    
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #8eceff;
+      border-radius: var(--radius-default);
+    }
+    
+    &::before {
+      content: 'Популярный';
+      position: absolute;
+      padding: 17px 16px 15px 16px;
+      color: var(--color-white);
+      background: #4c20c7;
+      border-radius: var(--radius-default);
+      left: 0;
+      right: 0;
+      top: -52px;
+      height: 135px;
+      z-index: 0;
+      font-size: 18px;
+      font-weight: normal;
+    }
 
     .tcard {
-      &__pop {
-        position: absolute;
-        padding: 17px 16px 15px 16px;
-        color: var(--color-white);
-        background: #4c20c7;
-        border-radius: var(--radius-default);
-        left: 0;
-        right: 0;
-        top: -52px;
-        height: 135px;
-        z-index: -1;
-        font-size: 18px;
-        font-weight: normal;
-      }
-
       &__plus {
         background-image: url($img + 'plus-white.svg');
       }
