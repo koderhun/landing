@@ -20,6 +20,14 @@ const paths = {
     dist: './dist/scripts/',
     watch: ['./src/blocks/**/*.js', './src/scripts/**/*.js'],
   },
+  copyScripts: {
+    src: [
+      './node_modules/jquery/dist/jquery.min.js',
+      './node_modules/swiper/swiper-bundle.min.js',
+      './src/scripts/**/*.js'],
+    dist: './dist/scripts/',
+    watch: ['./src/blocks/**/*.js', './src/scripts/**/*.js'],
+  },
   images: {
     src: [
       './src/images/**/*.{jpg,jpeg,png,gif,tiff,svg}',
@@ -47,6 +55,7 @@ const paths = {
   copy: {
     src: './src/images/favicons/*.{webmanifest,xml}',
     dist: './dist/images/favicons/',
+    watch: ['./src/images/favicons/*.{webmanifest,xml}'],
   },
   deploy: {
     src: './dist/**/*',
@@ -61,7 +70,7 @@ export const development = gulp.series(
   'clean',
   'views',
   'styles',
-  gulp.parallel(['scripts', 'images', 'webp', 'fonts', 'copy']),
+  gulp.parallel(['scripts', 'images', 'webp', 'fonts', 'copy', 'copyScripts']),
   'serve',
 )
 
@@ -76,6 +85,7 @@ export const prod = gulp.series(
     'fonts',
     'gzip',
     'copy',
+    'copyScripts',
   ]),
 )
 
