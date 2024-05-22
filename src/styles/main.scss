@@ -2308,6 +2308,9 @@ img {
   justify-content: center;
   height: 43px;
   border: 1px dotted var(--b1);
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 
   &::before {
     content: '';
