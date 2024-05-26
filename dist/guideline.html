@@ -146,6 +146,9 @@
                 <li>
                   <a href="#reg-modal" rel="modal:open">Регистрация</a>
                 </li>
+                <li>
+                  <a href="#reg2-modal" rel="modal:open">Регистрация 2 этап</a>
+                </li>
               </ul>
             </div>
           </div>
@@ -259,12 +262,64 @@
   </div>
 </div>
 
+
+<div id="reg2-modal" class="modal">
+  <div class="modal-header">
+    <h2 class="modal__title">
+      Регистрация
+    </h2>
+  </div>
+  <div class="modal-content modal-content--full">
+    <div class="mline minfo">
+      <div class="minfo__text">
+        Ваши контактные <br> данные:
+      </div>
+      <div class="minfo__gift">
+        Бесплатный период <br>
+        <b>3 недели</b>
+      </div>
+    </div>
+    <div class="mline">
+      <div class="mline__left">
+        <label class="finput">
+          <div class="finput__title">Название заведения (например: sushiwok)</div>
+          <input type="text" placeholder="Суперхавчик">
+        </label>
+        <label class="finput">
+          <div class="finput__title">Доменное имя (например: myorg)</div>
+          <input type="text" placeholder="superhavchik">
+        </label>
+        <div class="text-info">
+          Домен — это адрес в браузере к вашей панели управления. Домен должен содержать не менее 3-х символов и состоять из латинских букв и цифр
+        </div>
+      </div>
+      <div class="mline-right selfcenter">
+          <img src="./images/dotcom.png" alt="">
+      </div>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <div class="mfooter">
+      <div class="mfooter__left">
+      </div>
+      <div class="mfooter__right">
+        <div class="dotprog">
+          <div class="dotprog__item dotprog__item--active"></div>
+          <div class="dotprog__item"></div>
+          <div class="dotprog__item"></div>
+        </div>
+        <button class="btn-modal btn-modal--success">Зарегистрироваться</button>
+      </div>
+    </div>
+  </div>
+</div>
+
 <script src="./scripts/jquery.min.js"></script>
 <script src="./scripts/swiper-bundle.min.js"></script>
 <script src="./scripts/jquery.modal.min.js"></script>
 <script src="./scripts/scripts.js"></script>
   <script>
-    $('#reg-modal').modal();
+    $('#reg2-modal').modal();
   </script>
 </body>
 

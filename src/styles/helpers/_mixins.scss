@@ -77,6 +77,12 @@ $size-xl: 1440px;
   }
 }
 
+@mixin text-small {
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 130%;
+}
+
 @mixin text-medium {
   font-weight: normal;
   font-size: 20px;

@@ -1060,6 +1060,24 @@ button.swiper-pagination-bullet {
 .modal-content {
   max-width: 566px;
 }
+.modal-content--full {
+  max-width: 100%;
+}
+
+.mline {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.vcenter {
+  display: flex;
+  align-items: center;
+}
+
+.selfcenter {
+  align-self: center;
+}
 
 .minfo {
   width: 100%;
@@ -1073,8 +1091,10 @@ button.swiper-pagination-bullet {
   font-size: 20px;
   line-height: 130%;
   color: var(--b3);
+  width: 50%;
 }
 .minfo__gift {
+  width: 50%;
   font-weight: normal;
   font-size: 20px;
   line-height: 130%;
@@ -3925,6 +3945,12 @@ input::placeholder {
   color: var(--b4);
 }
 
+.text-info {
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 130%;
+}
+
 .btn-modal {
   font-weight: 500;
   font-size: 24px;
@@ -3937,6 +3963,10 @@ input::placeholder {
   text-align: center;
   transition: all 0.2s ease;
   cursor: pointer;
+  text-decoration: none;
+}
+.btn-modal--success {
+  background-color: var(--c01);
 }
 .btn-modal::hover, .btn-modal::focus {
   opacity: 0.8;

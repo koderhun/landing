@@ -2949,6 +2949,10 @@ input {
   }
 }
 
+.text-info {
+  @include text-small;
+}
+
 .btn-modal {
   @include header-3;
   color: var(--color-white);
@@ -2959,6 +2963,11 @@ input {
   text-align: center;
   transition: all .2s ease;
   cursor: pointer;
+  text-decoration: none;
+
+  &--success {
+    background-color: var(--c01);
+  }
 
   &::hover,
   &::focus {

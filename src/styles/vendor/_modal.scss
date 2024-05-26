@@ -26,6 +26,25 @@
 
 .modal-content {
   max-width: 566px;
+
+  &--full {
+    max-width: 100%;
+  }
+}
+
+.mline {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.vcenter {
+  display: flex;
+  align-items: center;
+}
+
+.selfcenter {
+  align-self: center;
 }
 
 .minfo {
@@ -38,9 +57,11 @@
   &__text {
     @include text-medium;
     color: var(--b3);
+    width: 50%;
   }
 
   &__gift {
+    width: 50%;
     @include text-medium;
     font-weight: 300;
     color: var(--b5);
