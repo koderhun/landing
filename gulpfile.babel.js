@@ -24,6 +24,7 @@ const paths = {
     src: [
       './node_modules/jquery/dist/jquery.min.js',
       './node_modules/swiper/swiper-bundle.min.js',
+      './node_modules/jquery-modal/jquery.modal.min.js',
       './src/scripts/**/*.js'],
     dist: './dist/scripts/',
     watch: ['./src/blocks/**/*.js', './src/scripts/**/*.js'],

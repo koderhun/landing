@@ -36,6 +36,12 @@
                   <a href="./tarifs.html">Тарифы</a>
                 </li>
               </ul>
+              <h2>Модальники</h2>
+              <ul>
+                <li>
+                  <a href="#reg-modal" rel="modal:open">Регистрация</a>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
@@ -45,6 +51,9 @@
     @@include("./template/footer.html")
   </div>
   @@include("./template/scripts.html")
+  <script>
+    $('#reg-modal').modal();
+  </script>
 </body>
 
 </html>

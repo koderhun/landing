@@ -2912,3 +2912,56 @@ img {
     }
   }
 }
+
+
+.finput {
+  display: block;
+  width: 100%;
+  margin-bottom: 24px;
+
+  &--tel {
+    max-width: 212px;
+  }
+
+  &__title {
+    @include text-micro;
+    color: var(--b5);
+    margin-bottom: 2px;
+  }
+
+  input {
+    width: 100%;
+  }
+}
+
+input {
+  padding: 12px 8px;
+  height: 50px;
+  background-color: var(--b1);
+  border: 0;
+  border-bottom: 1px solid var(--b4);
+  border-radius: 8px;
+  font-size: 20px;
+  line-height: 130%;
+
+  &::placeholder {
+    color: var(--b4);
+  }
+}
+
+.btn-modal {
+  @include header-3;
+  color: var(--color-white);
+  background-color: var(--b4);
+  border-radius: 48px;
+  padding: 19px 27px;
+  border:0;
+  text-align: center;
+  transition: all .2s ease;
+  cursor: pointer;
+
+  &::hover,
+  &::focus {
+    opacity: 0.8;
+  }
+}
