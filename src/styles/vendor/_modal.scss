@@ -1,9 +1,19 @@
+.blocker {
+  @include sm {
+    padding: 16px;
+  }
+}
+
 .modal {
   border-radius: var(--radius-default);
   padding: 24px;
   min-height: 120px;
   max-width: 732px;
   width: 100%;
+
+  @include sm {
+    padding: 16px;
+  }
 
   &--success {
     background: url($img + 'modal-success.svg') no-repeat left bottom #fff;
@@ -18,6 +28,11 @@
     font-weight: 500;
     font-size: 48px;
     line-height: 100%;
+
+    @include sm {
+      font-size: 28px;
+      line-height: 110%;
+    }
   }
 
   a.close-modal {
@@ -25,6 +40,11 @@
     width: 48px;
     top: 31px;
     right: 24px;
+
+    @include sm {
+      top: 16px;
+      right: 16px;
+    }
   }
 }
 
@@ -55,6 +75,10 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 24px;
+
+  @include sm {
+    grid-template-columns: 1fr;
+  }
 }
 
 .vcenter {
@@ -97,11 +121,19 @@
   align-items: center;
   gap: 24px;
 
+  @include sm {
+    flex-direction: column;
+  }
+
   &__right {
     display: flex;
     align-items: center;
     justify-content: flex-end;
     gap: 29.5px;
+
+    @include sm {
+      flex-direction: column;
+    }
   }
 }
 
@@ -130,6 +162,10 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 24px;
+
+  @include sm {
+    grid-template-columns: 1fr;
+  }
 }
 
 .demoline {
@@ -141,8 +177,12 @@
     .demoline__title {
       display: flex;
       align-items: flex-start;
-      justify-content: space-between;
+      
       gap: 12px;
+
+      @include min-sm {
+        justify-content: space-between;
+      }
 
       &::before {
         content: '';
@@ -183,8 +223,11 @@
     color: var(--b5);
     cursor: pointer;
     transition: all 0.2s ease;
-    min-height: 110px;
     @include text-small;
+
+    @include min-sm {
+      min-height: 110px;
+    }
   }
 
   input {
