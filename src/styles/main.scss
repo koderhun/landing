@@ -710,6 +710,28 @@ img {
   }
 }
 
+.btn-modal {
+  @include header-3;
+  color: var(--color-white);
+  background-color: var(--b4);
+  border-radius: 48px;
+  padding: 19px 27px;
+  border:0;
+  text-align: center;
+  transition: all .2s ease;
+  text-decoration: none;
+  cursor: pointer;
+
+  &--success {
+    background-color: var(--c01);
+  }
+
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+  }
+}
+
 .btn-tf {
   display: flex;
   align-items: center;
@@ -850,6 +872,23 @@ img {
   background: url($img + '/section1.webp') no-repeat center top;
   color: var(--color-white);
 
+  &--solutions {
+    padding-bottom: 82px;
+    background-image: url( $img + 'solutions.webp');
+
+    .baner {
+      &__head {
+        margin-top: 85px;
+        margin-bottom: 160px;
+        font-size: 64px;
+        line-height: 1.1;
+        span {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
   &__head {
     margin: 0;
     font-size: 58px;
@@ -888,6 +927,48 @@ img {
       justify-content: center;
       padding: 0 24px;
     }
+  }
+}
+
+.timeinst {
+  background-color: var(--color-white);
+  color: var(--color-black);
+  @include text-main;
+
+  &__left {
+    max-width: 760px;
+    margin-right: 5px;
+  }
+
+  &__right {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+
+  &__image {
+    margin-top: -76px;
+    width: 268px;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  &__head {
+    @include header-2;
+    margin-bottom: 14px;
+  }
+
+  &__coment {
+    color: var(--b5);
+  }
+
+  &__container {
+    min-height: 275px;
+    display: flex;
+
+    align-items: center;
   }
 }
 
@@ -2951,26 +3032,4 @@ input {
 
 .text-info {
   @include text-small;
-}
-
-.btn-modal {
-  @include header-3;
-  color: var(--color-white);
-  background-color: var(--b4);
-  border-radius: 48px;
-  padding: 19px 27px;
-  border:0;
-  text-align: center;
-  transition: all .2s ease;
-  cursor: pointer;
-  text-decoration: none;
-
-  &--success {
-    background-color: var(--c01);
-  }
-
-  &::hover,
-  &::focus {
-    opacity: 0.8;
-  }
 }
