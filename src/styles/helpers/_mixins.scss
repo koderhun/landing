@@ -107,6 +107,12 @@ $size-xl: 1440px;
   line-height: 110%;
 }
 
+@mixin header-2-big {
+  font-weight: 500;
+  font-size: 64px;
+  line-height: 100%;
+}
+
 @mixin header-3 {
   font-weight: 500;
   font-size: 24px;
