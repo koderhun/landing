@@ -66,7 +66,7 @@ body,
   .wrapper {
     background-color: var(--color-white);
 
-    > .container {
+    >.container {
       padding-top: 45px;
 
       @include md {
@@ -115,7 +115,8 @@ body,
   &--tf {
     background: var(--b1);
 
-    .sectionhead, .sectionHead {
+    .sectionhead,
+    .sectionHead {
       color: var(--color-black);
     }
 
@@ -588,8 +589,7 @@ img {
     padding-bottom: 16px;
   }
 
-  &__footer {
-  }
+  &__footer {}
 
   &__subfooter {
     padding-top: 10px;
@@ -720,7 +720,7 @@ img {
   background-color: var(--b4);
   border-radius: 48px;
   padding: 19px 27px;
-  border:0;
+  border: 0;
   text-align: center;
   transition: all .2s ease;
   text-decoration: none;
@@ -835,7 +835,7 @@ img {
   line-height: 1;
   color: var(--color-white);
   padding: 23px 32px 23px 32px;
-  border: 1px solid var(--b4);
+  border: 1px solid #478ED0;
   color: var(--color-white);
   border-radius: var(--radius-lg);
   text-align: center;
@@ -878,7 +878,7 @@ img {
 
   &--solutions {
     padding-bottom: 82px;
-    background-image: url( $img + 'solutions.webp');
+    background-image: url($img + 'solutions.webp');
 
     .baner {
       &__head {
@@ -886,6 +886,7 @@ img {
         margin-bottom: 160px;
         font-size: 64px;
         line-height: 1.1;
+
         span {
           text-decoration: underline;
         }
@@ -1012,11 +1013,9 @@ img {
 .btn-gradient {
   border-radius: var(--radius-lg);
   backdrop-filter: blur(24px);
-  background: linear-gradient(
-    134.1deg,
-    rgba(0, 198, 204, 0.65) 2.502%,
-    rgba(115, 0, 205, 0.65) 99.871%
-  );
+  background: linear-gradient(134.1deg,
+      rgba(0, 198, 204, 0.65) 2.502%,
+      rgba(115, 0, 205, 0.65) 99.871%);
   color: var(--color-white);
   transition: all 0.3s ease;
 
@@ -1292,7 +1291,7 @@ img {
     }
   }
 
-  &--button-white{
+  &--button-white {
     background-color: var(--b3);
 
     .pi {
@@ -1331,18 +1330,22 @@ img {
     padding: 0;
     height: auto;
     background-color: var(--color-white);
-    &::after {display: none;}
+
+    &::after {
+      display: none;
+    }
 
     .pi {
       &__head {
         color: var(--b8);
       }
+
       &__text {
         color: var(--b5);
       }
     }
 
-    > .row {
+    >.row {
       margin-bottom: 0;
     }
 
@@ -1689,6 +1692,7 @@ img {
   &__item {
     padding-left: 10px;
     position: relative;
+
     &::after {
       content: '';
       display: block;
@@ -1727,10 +1731,9 @@ img {
 
 .fz {
   font-size: 20px;
-  position: absolute;
-  top: -68px;
-  right: -44px;
   padding: 12px 14px;
+  position: absolute;
+  right: 0;
 
   @include md {
     right: 0;
@@ -1769,6 +1772,10 @@ img {
     margin-bottom: 38px;
   }
 
+  &__text {
+    position: relative;
+  }
+
   &__pictureBlock {
     display: block;
     min-width: 776px;
@@ -1782,10 +1789,10 @@ img {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-top: 48px;
+    margin-top: -27px;
 
-    @include md {
-      padding-top: 24px;
+    .btn {
+      white-space: nowrap;
     }
   }
 
@@ -1807,24 +1814,29 @@ img {
     @include md {
       padding-right: 0;
     }
+  }
 
-    div {
-      width: 8px;
-      height: 8px;
-      background-color: var(--c04);
-      border-radius: 100%;
-      display: block;
-      transition: all 0.3s;
+  &__dot {
+    width: 8px;
+    height: 8px;
+    background-color: var(--c04);
+    border-radius: 100%;
+    display: block;
+    transition: all 0.3s;
 
-      &.active {
-        width: 20px;
-        height: 20px;
-        background-color: var(--color-white);
-      }
+    &.active {
+      width: 20px;
+      height: 20px;
+      background-color: var(--color-white);
     }
   }
 
+  &__content {
+    padding-bottom: 85px;
+  }
+
   .row {
+    position: relative;
     gap: 73px;
     align-items: self-end;
 
@@ -1835,7 +1847,6 @@ img {
 
   .col {
     width: 100%;
-    position: relative;
   }
 
   .btn {
@@ -2495,7 +2506,7 @@ img {
       }
     }
   }
-  
+
   &__btn {
     border: 1px solid var(--b3);
     color: var(--b8);
@@ -2531,6 +2542,7 @@ img {
     line-height: 130%;
     color: var(--b5);
   }
+
   &__price {
     font-size: 48px;
     line-height: 110%;
@@ -2629,11 +2641,11 @@ img {
   &--popular {
     position: relative;
 
-    > * {
+    >* {
       position: relative;
       z-index: 1;
     }
-    
+
     &::after {
       content: '';
       position: absolute;
@@ -2644,7 +2656,7 @@ img {
       background-color: #8eceff;
       border-radius: var(--radius-default);
     }
-    
+
     &::before {
       content: 'Популярный';
       position: absolute;
@@ -2812,6 +2824,7 @@ img {
     gap: 26px;
     align-items: center;
   }
+
   &__head {
     display: inline-block;
     padding-bottom: 0;

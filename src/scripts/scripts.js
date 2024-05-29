@@ -44,4 +44,22 @@ $(function(){
       }
     }
   });
+
+
+  const weoffer = new Swiper(".swiper-weoffer", {
+    hashNavigation: {
+      watchState: true,
+    },
+    pagination: {
+      el: ".weofferblock__dots",
+      clickable: true,
+      bulletActiveClass: 'active',
+      bulletClass: 'weofferblock__dot',
+    },
+  });
+
+  $('.weofferblock__list > a').on('click', (e) => {
+    $('.weofferblock__list > a').removeClass('active')
+    $(e.target).addClass('active')
+  })
 });
