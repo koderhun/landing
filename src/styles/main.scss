@@ -692,6 +692,21 @@ img {
   background: url($img + 'section1.webp') no-repeat center;
 }
 
+.section--company {
+  .clientsblock {
+    padding-top: 133px;
+
+    @include md {
+      padding-top: 24px;
+    }
+    
+    &__badge {
+      color: var(--b5);
+      border-color: var(--b2);
+    }
+  }
+}
+
 .btn {
   @include button;
   border-radius: var(--radius-lg);
