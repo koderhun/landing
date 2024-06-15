@@ -46,6 +46,17 @@ $(function(){
   });
 
 
+  const weofferTabs = new Swiper(".weofferblock__list", {
+    slidesPerView: 1,
+    spaceBetween: 6,
+    breakpoints: {
+      1440: {
+        slidesPerView: 6
+      },
+    }
+  }); 
+
+
   const weoffer = new Swiper(".swiper-weoffer", {
     hashNavigation: {
       watchState: true,
@@ -55,11 +66,15 @@ $(function(){
       clickable: true,
       bulletActiveClass: 'active',
       bulletClass: 'weofferblock__dot',
+      thumbs: {
+        swiper: weofferTabs
+      }
     },
+    
   });
 
-  $('.weofferblock__list > a').on('click', (e) => {
-    $('.weofferblock__list > a').removeClass('active')
-    $(e.target).addClass('active')
-  })
+  // $('.weofferblock__list > a').on('click', (e) => {
+  //   $('.weofferblock__list > a').removeClass('active')
+  //   $(e.target).addClass('active')
+  // })
 });

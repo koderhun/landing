@@ -3002,6 +3002,10 @@ img {
   gap: 8px;
   margin-bottom: 38px;
 }
+.weofferblock__list .swiper-wrapper {
+  flex-wrap: wrap;
+  gap: 8px;
+}
 .weofferblock__text {
   position: relative;
 }
@@ -3018,7 +3022,7 @@ img {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: -27px;
+  margin-top: -37px;
 }
 .weofferblock__footer .btn {
   white-space: nowrap;
@@ -3146,10 +3150,11 @@ img {
 }
 
 .section4 {
+  position: relative;
   background-color: var(--color-white);
   border-radius: var(--radius-lg);
   color: var(--color-black);
-  padding: 82px 0 65px 0;
+  padding: 165px 0 56px 0;
 }
 @media (max-width: 1024px) {
   .section4 {
@@ -3172,13 +3177,32 @@ img {
 }
 
 .section5 {
-  padding-top: 91px;
+  padding-top: 165px;
   padding-bottom: 35px;
+  margin-top: -82px;
+  background: linear-gradient(136deg, #7104ce 0%, #336fcd 100%);
+  background-color: #336fcd;
 }
 @media (max-width: 1024px) {
   .section5 {
+    margin-top: 0;
     padding-top: 64px;
     overflow: hidden;
+  }
+}
+.section5 .container {
+  position: relative;
+}
+@media (min-width: 1025px) {
+  .section5 .container::before {
+    content: "";
+    position: absolute;
+    top: 99px;
+    left: 352px;
+    width: 146px;
+    height: 194px;
+    z-index: 1;
+    background: url("../images/cofe.webp") no-repeat center/contain;
   }
 }
 
@@ -3546,7 +3570,7 @@ img {
   position: relative;
 }
 .tarif__right {
-  padding-top: 20px;
+  padding-top: 16px;
 }
 @media (max-width: 1024px) {
   .tarif__right {
@@ -3568,6 +3592,9 @@ img {
 }
 .tarif__text {
   padding-bottom: 40px;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 130%;
 }
 .tarif .row {
   gap: 24px;
@@ -3579,8 +3606,22 @@ img {
   }
 }
 
+.giftblock {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  color: var(--color-white);
+}
+.giftblock__text {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 120%;
+  max-width: 250px;
+}
+
 .tf {
-  padding-top: 158px;
+  padding-top: 144px;
 }
 @media (max-width: 1024px) {
   .tf {
@@ -3591,7 +3632,7 @@ img {
   padding: 26px 0;
 }
 .tf__list {
-  padding-top: 152px;
+  padding-top: 78px;
 }
 .tf__list--simple {
   padding-top: 0;
@@ -3783,6 +3824,8 @@ img {
   border-radius: var(--radius-default);
   color: var(--b7);
   width: 226px;
+  max-height: 100vh;
+  height: 698px;
 }
 .tcard--popular {
   position: relative;
@@ -3867,7 +3910,7 @@ img {
 }
 .tcard__start {
   margin-bottom: 3px;
-  color: var(--b3);
+  color: #849ab3;
 }
 .tcard__plus {
   margin: 16px 0;
@@ -3933,6 +3976,7 @@ img {
 
 .th {
   display: flex;
+  gap: 30px;
 }
 @media (max-width: 1024px) {
   .th {

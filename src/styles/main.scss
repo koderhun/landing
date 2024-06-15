@@ -2,8 +2,7 @@ body {
   @include fontcommon;
   font-size: 12px;
   line-height: 1.2;
-  background: linear-gradient(136deg, #7104ce 0%, #336fcd 100%);
-  background-color: #336fcd;
+  @include brand-gradient;
 }
 
 h1,
@@ -1785,6 +1784,11 @@ img {
     flex-wrap: wrap;
     gap: 8px;
     margin-bottom: 38px;
+
+    .swiper-wrapper {
+      flex-wrap: wrap;
+      gap: 8px;
+    }
   }
 
   &__text {
@@ -1804,7 +1808,7 @@ img {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: -27px;
+    margin-top: -37px;
 
     .btn {
       white-space: nowrap;
@@ -1946,10 +1950,11 @@ img {
 }
 
 .section4 {
+  position: relative;
   background-color: var(--color-white);
   border-radius: var(--radius-lg);
   color: var(--color-black);
-  padding: 82px 0 65px 0;
+  padding: 165px 0 56px 0;
 
   @include md {
     padding: 40px 0 46px 0;
@@ -1972,12 +1977,32 @@ img {
 }
 
 .section5 {
-  padding-top: 91px;
+  padding-top: 165px;
   padding-bottom: 35px;
+  margin-top: -82px;
+  @include brand-gradient;
 
   @include md {
+    margin-top: 0;
     padding-top: 64px;
     overflow: hidden;
+  }
+
+  .container {
+    position: relative;
+    
+    @include min-md {
+      &::before {
+        content: '';
+        position: absolute;
+        top: 99px;
+        left: 352px;
+        width: 146px;
+        height: 194px;
+        z-index: 1;
+        background: url($img + 'cofe.webp') no-repeat center/contain;
+      }
+    }
   }
 }
 
@@ -2361,7 +2386,7 @@ img {
   }
 
   &__right {
-    padding-top: 20px;
+    padding-top: 16px;
 
     @include md {
       padding-top: 0;
@@ -2383,6 +2408,7 @@ img {
 
   &__text {
     padding-bottom: 40px;
+    @include text-main;
   }
 
   .row {
@@ -2395,8 +2421,21 @@ img {
   }
 }
 
+.giftblock {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  color: var(--color-white);
+
+  &__text {
+    @include header-3;
+    max-width: 250px;
+  }
+}
+
 .tf {
-  padding-top: 158px;
+  padding-top: 144px;
 
   @include md {
     padding-top: 82px;
@@ -2407,7 +2446,7 @@ img {
   }
 
   &__list {
-    padding-top: 152px;
+    padding-top: 78px;
 
     &--simple {
       padding-top: 0;
@@ -2652,6 +2691,8 @@ img {
   border-radius: var(--radius-default);
   color: var(--b7);
   width: 226px;
+  max-height: 100vh;
+  height: 698px;
 
   &--popular {
     position: relative;
@@ -2756,7 +2797,7 @@ img {
 
   &__start {
     margin-bottom: 3px;
-    color: var(--b3);
+    color: #849ab3;
   }
 
   &__plus {
@@ -2829,6 +2870,7 @@ img {
 
 .th {
   display: flex;
+  gap: 30px;
 
   @include md {
     justify-content: space-between;

@@ -77,6 +77,11 @@ $size-xl: 1440px;
   }
 }
 
+@mixin brand-gradient {
+  background: linear-gradient(136deg, #7104ce 0%, #336fcd 100%);
+  background-color: #336fcd;
+}
+
 @mixin text-main {
   font-weight: normal;
   font-size: 20px;
